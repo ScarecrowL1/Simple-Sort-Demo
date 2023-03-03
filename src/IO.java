@@ -11,13 +11,15 @@ public class IO {
             nums[i] = Integer.parseInt(strArr[i]);
         }
 
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
-
         scan.close();
 
         return nums;
+    }
+
+    public void printRes(int[] nums){
+        for (int num : nums){
+            System.out.print(num + " ");
+        }
     }
 
 }
