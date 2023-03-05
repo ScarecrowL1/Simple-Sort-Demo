@@ -1,5 +1,4 @@
-import java.sql.SQLOutput;
-import java.util.Scanner;
+
 
 public class Main {
 
@@ -7,11 +6,11 @@ public class Main {
         IO io = new IO();
         Sort sort = new Sort();
 
-        sort.setNums(io.input());
+        int[] nums = io.input();
 
-        sort.QuickSort();
+        sort.sort(nums);
 
-        io.printRes(sort.getNums());
+        io.printRes(nums);
     }
 
 

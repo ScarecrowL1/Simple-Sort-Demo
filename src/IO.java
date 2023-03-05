@@ -4,7 +4,7 @@ public class IO {
     public int[] input(){
         Scanner scan = new Scanner(System.in);
         String str =  scan.nextLine();
-        String[] strArr = str.split(" ");
+        String[] strArr = str.split("\s+");
         int[] nums = new int[strArr.length];
 
         for (int i = 0; i < strArr.length; i++){
