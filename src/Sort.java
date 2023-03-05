@@ -14,7 +14,7 @@ public class Sort {
             return;
         }
 
-        int pivot = nums[(start + end / 2)];
+        int pivot = nums[((start + end)/ 2)];
         int left = start;
         int right = end;
 
@@ -38,6 +38,8 @@ public class Sort {
         QSFun(start, right);
         QSFun(left, end);
     }
+
+
 
     public void setNums(int[] nums){
         this.nums = nums;
