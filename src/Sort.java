@@ -24,12 +24,14 @@ public class Sort {
         int right = end;
 
         while (left <= right) {
+            //这两个while条件两边都是 == pivot的话也交换
             while(left <= right && nums[left] < pivot){
                 left++;
             }
             while(left <= right && nums[right] > pivot){
                 right--;
             }
+            //此时 left > right 或者 nums[left] >= pivot 或者 num[right] <= pivot
             //找到两个冲突项后，交换
             if(left <= right){
                 int temp = nums[left];
@@ -40,6 +42,7 @@ public class Sort {
             }
         }
 
+        //此时left > right, 即left与right交错
         quickSort(start, right, nums);
         quickSort(left, end, nums);
     }
